@@ -10,9 +10,10 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
 
-    let itemArray = ["Decir Hola", "Platicar", "Decir Adios"]
+    var itemArray: [String] = []
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -59,6 +60,37 @@ class TodoListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true  )
     }
     
+    
+    
+    
+    
+    //MARK - Boton de añadir
+    
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Añade un Quehacer", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Añadir", style: .default) { (action) in
+            //Que sucedera cuando le puchen
+            print(textField.text!)
+            if textField.text != ""
+            {
+                self.itemArray.append(textField.text!)
+                self.tableView.reloadData()
+            }
+        }
+        
+        alert.addTextField { (alertTextfield) in
+            alertTextfield.placeholder = "Añada una tarea"
+            textField = alertTextfield
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+    }
     
     
     
