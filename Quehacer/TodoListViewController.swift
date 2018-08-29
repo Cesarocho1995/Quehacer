@@ -12,10 +12,17 @@ class TodoListViewController: UITableViewController {
 
     var itemArray: [String] = []
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if let items = defaults.array(forKey: "TodoListArray") as? [String]
+        {
+            itemArray = items
+        }
+        
     }
     
     
@@ -76,11 +83,14 @@ class TodoListViewController: UITableViewController {
         let action = UIAlertAction(title: "Añadir", style: .default) { (action) in
             //Que sucedera cuando le puchen
             print(textField.text!)
+            
             if textField.text != ""
             {
                 self.itemArray.append(textField.text!)
+                self.defaults.set(self.itemArray, forKey: "TodoListArray")
                 self.tableView.reloadData()
             }
+            
         }
         
         alert.addTextField { (alertTextfield) in
