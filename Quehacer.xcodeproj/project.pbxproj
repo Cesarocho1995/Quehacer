@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5456CF91F423117EADCDA523 /* Pods_Quehacer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE036994A5B45BCE4CCAE1B /* Pods_Quehacer.framework */; };
 		E019E3F62146F1040090586A /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E019E3F52146F1040090586A /* CategoryController.swift */; };
 		E04A20422135EF160033F67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04A20412135EF160033F67E /* AppDelegate.swift */; };
 		E04A20442135EF160033F67E /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04A20432135EF160033F67E /* TodoListViewController.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FE036994A5B45BCE4CCAE1B /* Pods_Quehacer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quehacer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		917E39DA7C342EB612EAF78A /* Pods-Quehacer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quehacer.debug.xcconfig"; path = "Target Support Files/Pods-Quehacer/Pods-Quehacer.debug.xcconfig"; sourceTree = "<group>"; };
 		E019E3F52146F1040090586A /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		E04A203E2135EF160033F67E /* Quehacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quehacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04A20412135EF160033F67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		E04A204B2135EF180033F67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04A204D2135EF190033F67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0C720982139CA2000447821 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EA312BE53CB936E48D4F8134 /* Pods-Quehacer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quehacer.release.xcconfig"; path = "Target Support Files/Pods-Quehacer/Pods-Quehacer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5456CF91F423117EADCDA523 /* Pods_Quehacer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92B492181EEDDCC7EBC92F00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				917E39DA7C342EB612EAF78A /* Pods-Quehacer.debug.xcconfig */,
+				EA312BE53CB936E48D4F8134 /* Pods-Quehacer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC9347518CFBB57872D1EB2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FE036994A5B45BCE4CCAE1B /* Pods_Quehacer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E04A20352135EF160033F67E = {
 			isa = PBXGroup;
 			children = (
 				E04A20402135EF160033F67E /* Quehacer */,
 				E04A203F2135EF160033F67E /* Products */,
+				92B492181EEDDCC7EBC92F00 /* Pods */,
+				CC9347518CFBB57872D1EB2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E04A20502135EF190033F67E /* Build configuration list for PBXNativeTarget "Quehacer" */;
 			buildPhases = (
+				4C7FA95C29C9EF031F2E5ABF /* [CP] Check Pods Manifest.lock */,
 				E04A203A2135EF160033F67E /* Sources */,
 				E04A203B2135EF160033F67E /* Frameworks */,
 				E04A203C2135EF160033F67E /* Resources */,
+				BD0FFA9C6A59A0ABDD7C5FD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C7FA95C29C9EF031F2E5ABF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quehacer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD0FFA9C6A59A0ABDD7C5FD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quehacer/Pods-Quehacer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quehacer/Pods-Quehacer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E04A203A2135EF160033F67E /* Sources */ = {
@@ -318,6 +394,7 @@
 		};
 		E04A20512135EF190033F67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 917E39DA7C342EB612EAF78A /* Pods-Quehacer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +413,7 @@
 		};
 		E04A20522135EF190033F67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA312BE53CB936E48D4F8134 /* Pods-Quehacer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
