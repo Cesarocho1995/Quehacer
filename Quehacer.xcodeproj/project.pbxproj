@@ -9,18 +9,21 @@
 /* Begin PBXBuildFile section */
 		5456CF91F423117EADCDA523 /* Pods_Quehacer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE036994A5B45BCE4CCAE1B /* Pods_Quehacer.framework */; };
 		E019E3F62146F1040090586A /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E019E3F52146F1040090586A /* CategoryController.swift */; };
+		E019E3FA214738C00090586A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E019E3F9214738C00090586A /* Item.swift */; };
+		E019E3FC214738D90090586A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E019E3FB214738D90090586A /* Category.swift */; };
 		E04A20422135EF160033F67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04A20412135EF160033F67E /* AppDelegate.swift */; };
 		E04A20442135EF160033F67E /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04A20432135EF160033F67E /* TodoListViewController.swift */; };
 		E04A20472135EF160033F67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04A20452135EF160033F67E /* Main.storyboard */; };
 		E04A20492135EF180033F67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04A20482135EF180033F67E /* Assets.xcassets */; };
 		E04A204C2135EF180033F67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04A204A2135EF180033F67E /* LaunchScreen.storyboard */; };
-		E0C720992139CA2000447821 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0C720972139CA2000447821 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1FE036994A5B45BCE4CCAE1B /* Pods_Quehacer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quehacer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		917E39DA7C342EB612EAF78A /* Pods-Quehacer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quehacer.debug.xcconfig"; path = "Target Support Files/Pods-Quehacer/Pods-Quehacer.debug.xcconfig"; sourceTree = "<group>"; };
 		E019E3F52146F1040090586A /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		E019E3F9214738C00090586A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E019E3FB214738D90090586A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E04A203E2135EF160033F67E /* Quehacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quehacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04A20412135EF160033F67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E04A20432135EF160033F67E /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +31,6 @@
 		E04A20482135EF180033F67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E04A204B2135EF180033F67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04A204D2135EF190033F67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0C720982139CA2000447821 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EA312BE53CB936E48D4F8134 /* Pods-Quehacer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quehacer.release.xcconfig"; path = "Target Support Files/Pods-Quehacer/Pods-Quehacer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +52,6 @@
 				917E39DA7C342EB612EAF78A /* Pods-Quehacer.debug.xcconfig */,
 				EA312BE53CB936E48D4F8134 /* Pods-Quehacer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,7 +97,8 @@
 		E04A20572137659A0033F67E /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				E0C720972139CA2000447821 /* DataModel.xcdatamodeld */,
+				E019E3F9214738C00090586A /* Item.swift */,
+				E019E3FB214738D90090586A /* Category.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -201,15 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Quehacer-checkManifestLockResult.txt",
 			);
@@ -223,16 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Quehacer/Pods-Quehacer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -249,10 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E019E3FA214738C00090586A /* Item.swift in Sources */,
 				E04A20442135EF160033F67E /* TodoListViewController.swift in Sources */,
 				E019E3F62146F1040090586A /* CategoryController.swift in Sources */,
-				E0C720992139CA2000447821 /* DataModel.xcdatamodeld in Sources */,
 				E04A20422135EF160033F67E /* AppDelegate.swift in Sources */,
+				E019E3FC214738D90090586A /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,19 +447,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E0C720972139CA2000447821 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E0C720982139CA2000447821 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = E0C720982139CA2000447821 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E04A20362135EF160033F67E /* Project object */;
 }
